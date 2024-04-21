@@ -1,0 +1,20 @@
+in console execute this commands in the next order:
+
+    set FLASK_APP=[file where is create_app() function].py
+    $env:FLASK_APP="[file where is create_app() function].py"
+    flask run
+
+The first two commands only need to execute once while
+Pycharm is not closed, then only use flask run command for start server always.
+If Pycharm is closed, and opened again, we'll need to execute the three commands again
+
+Example with this proyect:
+    set FLASK_APP=__init__.py
+    $env:FLASK_APP="__init__.py"
+    flask run
+
+NOTE:
+-In this case, __init__file.py in the root folder is where we define the create_app() function. Is there where the proyect start.
+-Remember execute those commands in console from the root folder. In this case "\ApiPythonMongoTest1"
+-In set FLASK_APP, file name it's not surrounded by "", but in $env:FLASK_APP, file name it need to be surrounded by ""
+-Maybe it would be a good idea, create main.py and his __init__.py into root folder
